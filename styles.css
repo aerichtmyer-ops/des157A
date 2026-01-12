@@ -1,3 +1,292 @@
-body{
-    background-color: aqua;
+
+#container{
+    min-width: 800px;
+    max-width: 1100px; 
+    margin: 0 auto; 
+
+}
+
+#banner{
+    width: 1100px;
+    height:250px;
+}
+
+.background-color{
+   background: linear-gradient(180deg, #e6e9fe 0%, #9993f3 100%);
+     
+   width: 100%;
+   margin: 0; 
+}
+
+
+header{
+    display: flex;
+    background: rgba(0, 0, 255, 0.18);
+    padding-top: 10px;
+
+    width: 100%;
+
+    width: 1100px;
+    height:250px;
+
+    text-align: center;
+    align-items: center;
+
+    position: relative;
+    overflow:hidden;
+}
+
+.imgbanner{
+    margin-top: -45px;
+}
+
+header h2{
+    color: #4F05F8;
+
+    font-family: "League Spartan";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 0.54px;
+
+    margin-top: -30px;
+}
+
+h1{
+  color: #6B2BFF;
+  
+  font-family: "Dancing Script", cursive;
+  font-size: 64px;
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: 1.92px;
+}
+
+footer{
+    width: 1100px;
+    height: 60px;
+
+    background: rgba(0, 0, 255, 0.18);
+
+    width: 100%;
+
+    display: flex;
+
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+
+    gap: 50px;
+}
+
+footer p, a{
+    color: #4F05F8;
+
+    font-family: "League Spartan";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 0.54px;
+
+    text-decoration: none;
+}
+
+footer a:hover{
+    text-decoration: underline;
+    text-decoration-color: #4F05F8;
+
+    text-decoration-thickness: 10%; /* 1.08px */
+    text-underline-offset: 25%; /* 4.5px */
+    text-underline-position: from-font;
+}
+
+main{
+    display: flex;
+
+    height: 344px;
+}
+
+section{
+   justify-content: left;
+   margin-top: -35px;
+}
+
+section ul{
+    padding: 0px;
+}
+
+section h2{
+    color: rgb(26, 2, 41);
+    font-family: "Playfair Display SC";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.72px;
+}
+
+section a {
+    color: rgb(34, 2, 55);
+    font-family: "League Spartan";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 27px */
+    letter-spacing: 0.54px;
+
+    text-decoration: none;
+}
+
+section ul li a:hover {
+    text-decoration: underline;
+    text-decoration-color: #4F05F8;
+
+    text-decoration-thickness: 10%; /* 1.08px */
+    text-underline-offset: 25%; /* 4.5px */
+    text-underline-position: from-font;
+}
+
+.research{
+    margin-left: 90px;
+}
+
+
+.mad{
+    margin-left: 145px;
+}
+
+.every{
+    margin-left: 120px;
+}
+
+.game{
+    margin-left: 110px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.fleur {
+    margin-top: -10px;
+}
+
+.bottomfleur{
+    margin-bottom: -12px;
+}
+
+.flowers{
+    display: flex;
+    justify-content: center;
+}
+
+.flower-1{
+    padding: 0px;
+    position: relative;
+    margin-top: -50px;
+    rotate: 30deg;
+    animation: spin 5s linear infinite;
+}
+
+.flower-2{
+    padding: 0px;
+    position: relative;
+    margin-top: -50px;
+    rotate: 30deg;
+    animation: spin 5s linear infinite;
+    animation-direction: reverse;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.top-left-accent{
+    margin-top:  -170px;
+}
+
+.top-right-accent{
+    margin-top:  -170px;
+}
+
+.left-flower-anim{
+   margin-top: -225px;
+   margin-left: 20px;
+
+   position:absolute;
+
+   transform: translate(0,0);
+   animation: none;
+    
+   cursor: pointer;    
+}
+
+.right-flower-anim{
+    margin-top: -225px;
+    margin-left: 1025px;
+
+    position:absolute;
+
+    transform: translate(0,0);
+    animation: none;
+    
+    cursor: pointer;
+}
+
+header:hover .right-flower-anim{
+   animation: fall-reverse 5s linear;
+}
+
+header:hover .left-flower-anim{
+   animation: fall 5s linear;
+}
+
+@keyframes fall {
+  
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+        opacity: 1;
+    }
+    25% {
+        transform: translate(-30px, 80px) rotate(20deg);
+    }
+    50% {
+        transform: translate(25px, 160px) rotate(-15deg);
+    }
+    75% {
+        transform: translate(-20px, 240px) rotate(30deg);
+    }
+    100% {
+        transform: translate(15px, 320px) rotate(-25deg);
+        opacity: 0;
+    }
+
+}
+ 
+  @keyframes fall-reverse{
+  
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+        opacity: 1;
+    }
+    25% {
+        transform: translate(30px, 80px) rotate(20deg);
+    }
+    50% {
+        transform: translate(-25px, 160px) rotate(-15deg);
+    }
+    75% {
+        transform: translate(20px, 240px) rotate(30deg);
+    }
+    100% {
+        transform: translate(-15px, 320px) rotate(-25deg);
+        opacity: 0;
+    }
 }
