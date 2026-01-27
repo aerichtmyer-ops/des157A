@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS & DOM Experiment 2</title>
+	<style>
+
+		body{
+			font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+			line-height: 2em;
+        
+            margin-top: 0px;
+		}
+
+        h1{
+            font-size: 42px;
+            padding: 5px;
+        }
+
+        p{
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 18px;
+            padding: 5px;
+        }
+		
+        header{
+            margin-left:200px;
+            margin-right: 200px;
+            
+            max-width: 800px;  
+            background-color:aliceblue;
+            border: black 4px solid;
+            border-radius: 12px;
+            box-shadow: 5px 8px 4px 0 rgba(9, 1, 30, 0.28);
+            padding: 25px;
+            
+        }
+    
+
+		#background {
+			padding-top: 75px;
+            padding-bottom: 0px;
+            
+			max-width: 1200px;
+            max-height: 700px;
+
+            margin-left: auto;
+            margin-right: auto;
+		
+		}
+        footer{
+            display: flex;
+            justify-content: center;
+            margin-top: 480px;
+            width: 1200px;
+            background-color: rgb(16, 18, 19);
+            
+        }
+        footer p{
+            color: aliceblue;
+        }
+		
+	
+		
+   
+	</style>
+</head>
+<body>
+    <main id = "background">
+		<header>
+
+			<h1>How well do you know the color wheel?</h1>
+			<p>Answer corrrectly to change the background to the corresponding color.</p>
+
+		</header>
+
+ <footer>
+			<p id="copyright">By Alexis Richtmyer</p>
+	</footer>
+	</main>
+    	
+   
+	
+	<script>
+
+        //this program asks the user to enter a primary number, then enter its complementary color. If correct, the background will change to the inputted color. If incorrect, nothing will change.
+
+        var enterColor = prompt('Please enter a primary color', '');
+
+        var colors = ['red','green', 'yellow','purple','blue','orange'];
+
+
+        //fixed attempt with a return value
+        function pickColor(color){
+        var answer;
+
+        if( color === 'red'){
+            answer = prompt('What is the complementary color of red?','');
+           
+            if( answer === 'green'){
+                return 'green';
+            } 
+
+        } else if (color === 'yellow'){
+            answer = prompt('What is the complementary color of yellow?','');
+
+            if( answer === 'purple'){
+                return 'purple';
+            } 
+        } else if (color === 'blue'){
+            answer = prompt('What is the complementary color of blue?','');
+
+            if( answer === 'orange'){
+                return 'orange';
+            } 
+        }
+        return null;
+      }
+    
+
+      //added function to return value
+      function changeBackground(color){
+        if(color !== null){
+            document.querySelector('#background').style.backgroundColor = color;
+        }
+      }
+
+      var resultColor = pickColor(enterColor);
+      changeBackground(resultColor);
+
+
+       
+        //first attempt
+    //    function pickColor(color){
+    //     var answer;
+
+    //     if( color === 'red'){
+    //         answer = prompt('What is the complementary color of red?','');
+           
+    //         if( answer === 'green'){
+    //             answer = (`Correct!`);
+    //             document.querySelector('#background').style.backgroundColor = 'green';
+    //         } else{
+    //             answer = null;
+    //         }
+
+    //     } else if (color === 'yellow'){
+    //         answer = prompt('What is the complementary color of yellow?','');
+
+    //         if( answer === 'purple'){
+    //             answer = (`Correct!`);
+    //             document.querySelector('#background').style.backgroundColor = 'purple';
+    //         } else{
+    //             answer = null;
+    //         }
+    //     } else if (color === 'blue'){
+    //         answer = prompt('What is the complementary color of blue?','');
+
+    //         if( answer === 'orange'){
+    //             answer = (`Correct!`);
+    //             document.querySelector('#background').style.backgroundColor = 'orange';
+    //         } else{
+    //             answer = null;
+    //         }
+    //     }
+    //     else{
+    //         answer=null;
+    //     }
+    //   }
+    //   pickColor(enterColor);
+
+
+
+
+
+
+
+
+
+
+
+        // if('red' == 'green'){
+        //     answer = (`Correct!`);
+        //     document.querySelector('.background').style.colors = 'green';
+        // }else{
+        //     answer = (`Incorrect`);
+        // }
+        // return answer;
+       
+       
+        
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+        // function pickColor(colors){
+
+        //     var answer;
+
+        //     if( colors == 'blue') {
+        //         answer = ('correct!')
+        //         document.querySelector('.background').style.colors = 'blue';
+        //     } else{
+        //         answer = ('Incorrect. Try Again!');
+        //     }
+        //     return answer;
+        // }
+
+	</script>
+    
+</body>
+</html>
