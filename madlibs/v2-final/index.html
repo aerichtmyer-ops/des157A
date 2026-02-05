@@ -47,12 +47,12 @@
                                
                             <div class="field">
                                  <label for="name">Name</label>
-                                 <input type ="text" id="name">
+                                 <input type ="text" id="name" required>
                             </div>
                                
                             <div class="field">
-                                <label for="acessorySelect">Accessory</label>
-                                <select id="acessorySelect" name ="acessory">
+                                <label for="accessorySelect">Accessory</label>
+                                <select id="accessorySelect" name ="accessory" required>
                                     <option value = "">- - -</option>
                                     <option value ="Mustache">Mustache</option>
                                     <option value = "Glasses">Glasses</option>
@@ -63,22 +63,22 @@
                                 
                             <div class="field">
                                 <label for ="adjective">Adjective</label>
-                                <input type ="text" id="adjective">
+                                <input type ="text" id="adjective" required>
                             </div>
                     
                             <div class="field">
                                 <label for="verb">Verb</label>
-                                <input type ="text" id="verb" placeholder="ending in -ing">
+                                <input type ="text" id="verb" placeholder="ending in -ing" required>
                             </div>
                                
                             <div class="field">
                                 <label for="tool">Tool</label>
-                                <input type ="text" id ="tool">
+                                <input type ="text" id ="tool" required>
                             </div>
 
                             <div class="field">
                                 <label for="color">Color</label>
-                                <select id="color" name="color">
+                                <select id="color" name="color" required>
                                     <option value = "">- - -</option>
                                     <option value ="red">Red</option>
                                     <option value = "pink">Pink</option>
@@ -91,9 +91,12 @@
                                 <input type = "submit" value="Submit for Treasure!">
                         </form>
                     </article>   
-                
                     
                 </div>
+
+            <div id = "answer" class="hidden">
+                <p class = "result"></p> 
+             </div>
     
         </main>
         
