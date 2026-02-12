@@ -112,6 +112,26 @@ h3{
     margin-left: 25px;
    
 }
+
+figure, img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+}
+
+figcaption {
+    font-family: "League Spartan";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400; 
+    color: rgb(24, 0, 40);
+
+    
+    margin-top: 10px;
+    text-align: center;
+}
+
 article {
     
     border-radius: 12px;
@@ -247,7 +267,7 @@ footer a:hover{
 }
 
 .bottomfleur{
-    margin-bottom: -12px;
+    margin-bottom: -8px;
 }
 
 .left-flower-anim{
