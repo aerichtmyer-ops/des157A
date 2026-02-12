@@ -16,7 +16,7 @@
 
     <script></script>
 
-    <title>Mad Libs V1</title>
+    <title>Mad Libs V2</title>
 </head>
 <body>
    
@@ -49,7 +49,12 @@
                                  <label for="name">Name</label>
                                  <input type ="text" id="name" required>
                             </div>
-                               
+                                
+                            <div class="field">
+                                <label for ="adjective">Adjective</label>
+                                <input type ="text" id="adjective" required>
+                            </div>
+
                             <div class="field">
                                 <label for="accessorySelect">Accessory</label>
                                 <select id="accessorySelect" name ="accessory" required>
@@ -59,11 +64,6 @@
                                     <option value = "Hat">Hat</option>
                                     <option value = "hairpin">Hairpin</option>
                                 </select>
-                            </div>
-                                
-                            <div class="field">
-                                <label for ="adjective">Adjective</label>
-                                <input type ="text" id="adjective" required>
                             </div>
                     
                             <div class="field">
@@ -96,6 +96,7 @@
 
             <div id = "answer" class="hidden">
                 <p class = "result"></p> 
+                <p><a href = "#" id = "resubmit">Try Again!</a></p>
              </div>
     
         </main>
