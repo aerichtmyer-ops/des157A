@@ -1,0 +1,99 @@
+.im-fell-dw-pica-sc-regular {
+  font-family: "IM Fell DW Pica SC", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.caption{
+    
+ 
+    align-content: center;
+    flex-wrap: wrap;
+    gap: 5px;
+    font-family: "IM Fell DW Pica SC", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 38px;
+    color:rgb(240, 248, 255, .55);
+    
+    padding-bottom: 8px;
+   
+}
+
+.caption p{
+    
+    margin: 0;
+    text-align: center;
+}
+
+.past {
+    color:rgb(240, 248, 255, .65);
+}
+
+.present{
+    color:rgb(240, 248, 255, .75);
+}
+
+.future{
+    color:rgb(240, 248, 255);
+}
+
+body{
+    background-image: url(images/background.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed; 
+    
+}
+
+:root {
+    --sliderwidth: 0;
+}
+
+#slider{
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 235px;
+   
+    padding: 25px;
+   
+    background: rgba(0, 0, 0, 0.70);
+    
+    position: relative;
+    width: 100%;
+}
+
+.track{
+    display: flex;
+}
+
+#slider div img{
+    height: 100%;
+    display: block;
+    margin-right: 20px;
+}
+
+.set1, .set2{
+    display: flex;
+    height: 100%;;
+}
+img{
+    margin-right: 20px;
+    filter: grayscale(100%);
+}
+
+img:hover{
+    filter: grayscale(0%);
+}
+
+@keyframes scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(var(--sliderwidth)); }
+}
+.animate {
+    animation: scroll 60s linear infinite;
+ 
+}
