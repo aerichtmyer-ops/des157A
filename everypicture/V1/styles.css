@@ -1,0 +1,118 @@
+.im-fell-dw-pica-sc-regular {
+  font-family: "IM Fell DW Pica SC", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body{
+    background-color: rgb(0, 0, 0);
+
+}
+
+header{
+    background: rgba(0, 0, 0, 0.60);
+    display: flex;
+    justify-self: center;
+    
+    margin-top: 80px;
+  
+    z-index: 2;
+    position: absolute;
+
+    animation: shrinkIn 1.8s ease-out forwards;
+}
+
+@keyframes shrinkIn {
+  from {
+    transform: scale(1.3);   /* starts big */
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);     /* original size */
+    opacity: 1;
+  }
+}
+
+h1{
+  font-family: "IM Fell DW Pica SC", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 24px;
+  color:rgb(242, 250, 250);
+  text-align: center;
+  padding-left: 5px;
+  padding-right: 5px;
+
+}
+
+#container{
+    position: relative;
+    
+    height:750px;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.background-img {
+   position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+   
+   
+   display: flex;
+   justify-content: center;
+    align-items: center;
+  
+    z-index: 1;
+  
+}
+
+.background-img img{
+    max-width: 100%;
+    max-height: 100%;
+
+}
+
+.frame1{
+    position: absolute;
+    top:280px;
+    left:600px;
+    z-index: 2;
+    filter: grayscale(100%);
+}
+
+.frame2{
+    position: absolute;
+    top:500px;
+    left:427px;
+    z-index: 2;
+    filter: grayscale(100%);
+}
+
+.frame1:hover{
+    filter: grayscale(0%);
+}
+
+.frame2:hover{
+    filter: grayscale(0%);
+}
+
+footer{
+    display: flex;
+
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+
+    gap: 50px;
+}
+
+footer a,p{
+    color:aliceblue;
+    font-family: "IM Fell DW Pica SC", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+}
