@@ -48,50 +48,91 @@ h1{
 }
 
 #container{
-    position: relative; 
-    
-    width: 100%;
-    
+    position: fixed; 
+    display: block;
+   
+    /*width: 100%;*/
+    width: 70vw;
+    height:100vh;
+   
 
-    /* height:750px;
-    width: 1200px; */
-    margin: 0 auto;
+
+    transition: transform 2s ease;
+
+    /*height:750px;
+    max-width: 1200px; 
+    margin: 0 auto;*/
 }
 
-.background-img {
-    position: relative;
-   /* position: absolute; */
+/*.background-img {
+    
+   /* position: absolute; 
    top: 0;
    left: 0;
-   /* width: 100%;
-   height: 100%; */
+   width: 100%;
+   height: 100%; 
 
    display: flex;
    justify-content: center;
    align-items: center;
    
    z-index: 1;
-}
+ } 
+*/
 
-.background-img img{
-    
-  width: 100%;
+.background-img img, svg{
   
+
+  position: absolute;  
+  top:0;
+  left:0;
+  transition: transform 0.2s;
 } 
+
+svg{
+  opacity: 0;
+}
 
 .frame1{
     position: absolute;
-    top:280px;
-    left:600px;
+    top:600px;
+    left:778px;
     
     z-index: 2;
     filter: grayscale(100%);
 }
 
+
+
 .frame2{
     position: absolute;
-    top:500px;
-    left:435px;
+    top:496px;
+    left:548px;
+    z-index: 2;
+    filter: grayscale(100%);
+}
+
+.frame4{
+  position: absolute;
+    top:400px;
+    left:932px;
+    z-index: 2;
+    filter: grayscale(100%);
+}
+
+
+.frame5{
+  position: absolute;
+    top:700px;
+    left:548px;
+    z-index: 2;
+    filter: grayscale(100%);
+}
+
+.frame6{
+  position: absolute;
+    top:700px;
+    left:932px;
     z-index: 2;
     filter: grayscale(100%);
 }
@@ -101,6 +142,18 @@ h1{
 }
 
 .frame2:hover{
+    filter: grayscale(0%);
+}
+
+.frame4:hover{
+    filter: grayscale(0%);
+}
+
+.frame5:hover{
+    filter: grayscale(0%);
+}
+
+.frame6:hover{
     filter: grayscale(0%);
 }
 
@@ -132,3 +185,4 @@ footer a,p{
 
     background-color: rgb(0, 0, 0);
 }
+
