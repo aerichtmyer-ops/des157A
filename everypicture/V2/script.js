@@ -47,14 +47,11 @@
          const mouseY = event.clientY - rect.top;
 
         //define hotspot positions for mouse to zoom into
-         const hotSpot1 = mouseX >= 395 && mouseX <= 440 && mouseY >=415 && mouseY <= 480;
-         const hotSpot2 = mouseX >= 670 && mouseX <= 720 && mouseY >=350 && mouseY <= 415;
-         
-         const hotSpot3 = mouseX >= 560 && mouseX <= 605 && mouseY >=485 && mouseY <= 545;
-        
-         const hotSpot4 = mouseX >= 450 && mouseX <= 500 && mouseY >=550 && mouseY <= 610;
-       
-         const hotSpot5 = mouseX >= 670 && mouseX <= 718 && mouseY >=545 && mouseY <= 610;
+         const hotSpot1 = mouseX >= 775 && mouseX <= 850 && mouseY >=590 && mouseY <= 680;
+         const hotSopt2 = mouseX >= 545 && mouseX <= 620 && mouseY >=490 && mouseY <= 580;
+         const hotSopt3 = mouseX >= 545 && mouseX <= 620 && mouseY >=690 && mouseY <= 785;
+         const hotSopt4 = mouseX >= 930 && mouseX <= 1000 && mouseY >=690 && mouseY <= 785;
+         const hotSopt5 = mouseX >= 930 && mouseX <= 1000 && mouseY >=400 && mouseY <= 485;
 
          //to hide and show header
          const Header = document.querySelector("header");
@@ -69,7 +66,7 @@
             container.style.transform = "scale(4)";
 
             isZoomed = true;
-         } else if (hotSpot2){
+         } else if (hotSopt2){
             const originX = (mouseX / rect.width) * 100;
             const originY = (mouseY / rect.height) * 100;
 
@@ -78,21 +75,21 @@
             container.style.transform = "scale(4)";
 
            
-         } else if (hotSpot3){
+         } else if (hotSopt3){
             const originX = (mouseX / rect.width) * 100;
             const originY = (mouseY / rect.height) * 100;
 
             Header.style.visibility = "hidden";
             container.style.transformOrigin = originX + "%" + originY + "%";
             container.style.transform = "scale(4)";
-         } else if (hotSpot4){
+         } else if (hotSopt4){
             const originX = (mouseX / rect.width) * 100;
             const originY = (mouseY / rect.height) * 100;
 
             Header.style.visibility = "hidden";
             container.style.transformOrigin = originX + "%" + originY + "%";
             container.style.transform = "scale(4)";
-         } else if (hotSpot5){
+         } else if (hotSopt5){
             const originX = (mouseX / rect.width) * 100;
             const originY = (mouseY / rect.height) * 100;
 
