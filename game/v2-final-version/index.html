@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game - V2 - Final Version</title>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaisei+HarunoUmi&family=Luxurious+Roman&family=Sorts+Mill+Goudy&display=swap" rel="stylesheet">
+
+    <link href="styles.css" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Star Catcher</h1>
+           
+             <div class = "line"></div>
+        </header> 
+
+        <div class="beginGame">
+            <h2>Instructions: Begin with two players and roll the die to determine who goes first. Keep rolling the die to collect as many stars as you can or  choose to pass. If you roll a one, your turn is over and is given to the other player. If you roll a blank, your star count will drop to O. The first player to catch 30 stars or higher will be declared winner.</h2>
+            <input type = "submit" value="Begin Game">
+        </div>
+
+
+ 
+        
+
+            <div class = "hidden">
+
+                           <div id= "die">
+                <img class= "imgdie" src="images/die2.svg" alt = "die of 2" height="424" width="463"> 
+            </div> 
+            
+            <div id = "gamecontrol">
+                <h2>Roll die to begin and assign player to start</h2>
+                <button id = "startgame">Roll</button>
+            </div>
+
+            <div id="game">
+                <!-- <p></p> -->
+            </div>
+
+            <div id = "actions">
+
+                <!-- <div class="pass">
+                    <input type = "submit" value="Pass">
+                </div>  -->
+            </div>
+
+
+            <div id="score">
+                <!-- <p>Player 1: [i]</p>
+                <p>Player 2: [i]</p> -->
+            </div>
+
+        </div>
+
+
+    </main>
+</body>
+</html>

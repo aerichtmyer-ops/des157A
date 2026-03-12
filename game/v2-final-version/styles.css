@@ -1,0 +1,327 @@
+.luxurious-roman-regular {
+  font-family: "Luxurious Roman", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.kaisei-harunoumi-regular {
+  font-family: "Kaisei HarunoUmi", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.sorts-mill-goudy-regular {
+  font-family: "Sorts Mill Goudy", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body{
+    background-image: url(images/index.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-attachment: cover; */
+    height:100vh;
+    width: 100vw;
+}
+
+h1 {
+  font-family: "Luxurious Roman", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 4.2em;
+  color: #FCAB0A;
+  text-align: center;
+  border-bottom: 1px #FCAB0A;;
+  margin-bottom: 2%;
+}
+
+h2{
+  font-family: "Sorts Mill Goudy", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.2em;
+  line-height: 180%;
+  color: #FFF5F5;
+  margin: 12%;
+  text-align: justify;
+  padding: 16px;
+  background-color: rgb(15, 1, 37,.75);
+
+  border-radius: 8px;
+}
+
+.line{
+    height:2px;
+    width: 85%;
+    background-color: #FCAB0A;
+    
+    margin: 0 auto;
+    margin-top: -2%;
+}
+
+.hidden{
+  display:none;
+}
+
+#gamecontrol h2{
+  display: flex;
+  justify-content: center;
+  padding: 8px;
+  margin-top: 25px;
+  margin-bottom: 40px;
+}
+
+#startgame{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin: 0 auto;
+   
+   width: 130px;
+   height: 42px;
+   padding: 5px;
+   color: #FFFDF5;
+   font-family: "Luxurious Roman";
+   text-align: center;
+   font-size: 1.6em;
+   font-style: normal;
+   font-weight: 400;
+   border-radius: 8px;
+   background: #230072;
+   box-shadow: 0 2px 15.4px 3px #D5A33E;
+}
+
+#startgame,
+input[type="submit"]{
+    display: block;
+    margin: 40px auto;
+} 
+
+#startgame:hover{
+  background: #4600de;
+  color:#e49800;
+}
+
+input[type="submit"]{
+  display: flex;
+   margin: 0 auto;
+   margin-top: 10%;
+   width: 155px;
+   height: 42px;
+   color: #FFFDF5;
+   font-family: "Luxurious Roman";
+   font-size: 1.4em;
+   font-style: normal;
+   font-weight: 400;
+   border-radius: 8px;
+   background: #230072;
+   box-shadow: 0 2px 15.4px 3px #D5A33E;
+}
+
+input[type="submit"]:hover {
+    background: #4600de;
+    color:#e49800;
+}
+
+#die{
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.imgdie{
+  max-width: 320px;
+  /* height: auto;
+  margin: 0;
+   display: flex;
+  justify-self: center;
+  margin-top: 4%;
+  margin-left: 10%; 
+  margin-right: 10%; */
+}
+.imgdie{
+  max-width: 100%; 
+  height: auto; 
+}
+
+/* #playarea{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    margin-top: 60px;
+} */
+
+#actions{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24%;
+    background: none;
+  box-shadow: none;
+  width: auto;
+  margin-top: 20px;
+
+   /* width: 155px;
+   height: 42px;
+   color: #FFFDF5;
+   font-family: "Luxurious Roman";
+   font-size: 1.46em;
+   font-style: normal;
+   font-weight: 400;
+   border-radius: 8px;
+   background: #230072;
+   box-shadow: 0 2px 15.4px 3px #D5A33E; */
+}
+
+#roll{
+    display: flex;
+    text-align: center;
+   margin: 0 auto;
+   margin-top: 10%;
+   width: 155px;
+   height: 42px;
+   color: #FFFDF5;
+   font-family: "Luxurious Roman";
+   font-size: 1.46em;
+   font-style: normal;
+   font-weight: 400;
+   border-radius: 8px;
+   background: #230072;
+   box-shadow: 0 2px 15.4px 3px #D5A33E;
+}
+
+.pass{
+  font-size: 1.46em;
+}
+
+#game{
+  display: flex;
+  justify-content: center;
+  gap:20px;
+  border-radius: 8px;
+  background: rgb(3, 0, 9,.4);
+  padding: 8px;
+  margin-left: 36px;
+  margin-right: 36px;
+  margin-top: 25px;
+  margin-bottom: 30px;
+}
+
+#game p{
+  color: rgb(255, 253, 245,.75);
+  font-size: 1.35em;
+  padding: 6px;
+  margin: 0;
+}
+
+#score{
+  display: flex;
+  justify-content: center;
+  gap: 10%;
+  margin-top: 25px;
+}
+
+#score p{
+  color: #FCAB0A;
+  font-family: "Luxurious Roman", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.42em;
+}
+
+p{
+  font-family: "Kaisei HarunoUmi", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+#roll,
+#rollagain,
+#pass{
+  width: 140px;
+  height: 42px;
+  border-radius: 8px;
+  background: #230072;
+  color: white;
+  font-family: "Luxurious Roman";
+  font-size: 1.4em;
+  border: none;
+  box-shadow: 0 2px 15px 3px #D5A33E;
+}
+
+@media screen and (min-width: 600px) {
+  h1{
+    font-size: 4em;
+   
+    margin-top: .5%;
+    
+
+  }
+
+  .line{
+    margin-top: -2%;
+  }
+
+  h2{
+    font-size: 1.4em;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 8%;
+    margin-bottom: 2%;
+    padding: 2%;
+  }
+
+  input[type="submit"]{
+    margin-top: 4%;
+    font-size: 1.6em;
+    width: 170px;
+    height: 48px;
+  }
+
+ .imgdie{
+  display: flex;
+  justify-content: center;
+  margin-top: 4%;
+  margin-left: 30%;
+  margin-right: 30%;
+ }
+
+  #actions{
+    display: flex;
+    justify-content: center;
+    margin-top: -392px;
+    gap: 44%;
+  }
+
+  #game{
+    padding: 8px;
+    margin-top: 20px;
+    width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+    
+  }
+
+  #game p{
+   color: rgb(255, 253, 245,.75);
+   font-size: 1.35em;
+   padding: 6px;
+   margin: 0;
+  }
+  #gamecontrol h2{
+    padding: 8px;
+    margin-top: 20px;
+    width: 420px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.4em;
+  }
+  #score{
+    display: flex;
+    justify-content: center;
+    gap: 10%;
+    margin-top: 325px;
+  }
+}
