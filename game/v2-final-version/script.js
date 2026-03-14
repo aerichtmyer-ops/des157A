@@ -9,6 +9,10 @@
      const game = document.querySelector('#game');
      const score = document.querySelector('#score');
      const actionArea = document.querySelector('#actions');
+
+     //buttons
+     const winSound = new Audio('audio/crowdapplause.mp3');
+     const buzzSound = new Audio('audio/BUZZER.mp3');
      
 
      //overlay begin game button
@@ -73,6 +77,7 @@
        if( gameData.rollSum === 1){
          console.log('roll 1: penalty');
          document.querySelector('#message').innerHTML = '<p>Oh no! Your turn has been skipped!</p>';
+         buzzSound.play();
          //set score for current player
          gameData.score[gameData.index] = 0;
 
@@ -88,6 +93,7 @@
          console.log('the die was a value of 3');
          gameData.index ? (gameData.index = 0) : (gameData.index = 1);
          document.querySelector('#message').innerHTML = `<p>Your rolled a 3, turn is given to ${gameData.players[gameData.index]}</p>`;
+         buzzSound.play();
          setTimeout(setUpTurn, 2000);
        }
        else {
@@ -113,6 +119,7 @@
        function checkWinningCondition(){
          if(gameData.score[gameData.index] > gameData.gameEnd) {
             score.innerHTML = `<h2>${gameData.players[gameData.index]} wins with ${gameData.score[gameData.index]} points!</h2>`;
+            winSound.play();
 
             actionArea.innerHTML = '';
             //document.querySelector('#quit').innerHTML = 'Retry';//check for CSS condition of #quit

@@ -328,12 +328,38 @@ input[type="submit"]:hover {
 }
 
 #message p{
-    color: rgb(255, 253, 245,.75);
-    font-size: 1.35em;
+  color: rgb(255, 253, 245,.75);
+  font-size: 1.35em;
   background-color: rgb(15, 1, 37,.75);
   border-radius: 8px;
 
   padding: 8px;
+}
+
+footer{
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  background: rgb(3,0,9,.45);
+  border-radius: 8px;
+  padding: 6px 14px;
+
+  font-family: "Luxurious Roman", serif;
+  font-size: 1.2em;
+
+  box-shadow: 0 2px 12px 2px #D5A33E;
+}
+
+footer a{
+  text-decoration: none;
+  color: #FCAB0A;
+  transition: color .25s ease;
+}
+
+footer a:hover{
+  color: #FFFDF5;
 }
 @media screen and (min-width: 600px) {
   h1{
@@ -437,14 +463,14 @@ input[type="submit"]:hover {
     gap: 10%;
     position: fixed;
     bottom: 20px;
-  left: 30px;
-  right: 0;
+    left: 30px;
+    right: 0;
     /* margin-top: 275px;
     margin-bottom: 15px; */
   }
 
   #roll{
-    margin-top: 36%;
+    margin-top: 30%;
   }
 
 
@@ -461,7 +487,7 @@ input[type="submit"]:hover {
 #score h2{
   margin-top: 380px;
   display: flex;
-   width:400;
+   /* width:400; */
     justify-content:center;
     margin: auto;
     margin-bottom: 40px;
