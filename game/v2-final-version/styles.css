@@ -29,14 +29,15 @@ h1 {
   font-family: "Luxurious Roman", serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 4.2em;
+  font-size: 3.4em;
   color: #FCAB0A;
   text-align: center;
-  border-bottom: 1px #FCAB0A;;
+  border-bottom: 1px #FCAB0A;
+  margin-top: 2%;
   margin-bottom: 2%;
 }
 
-h2{
+.beginGame h2{
   font-family: "Sorts Mill Goudy", serif;
   font-weight: 400;
   font-style: normal;
@@ -64,13 +65,47 @@ h2{
   display:none;
 }
 
-#gamecontrol h2{
-  display: flex;
-  justify-content: center;
-  padding: 8px;
+#gamecontrol {
+ 
+
+  /* display: flex;
+  justify-content: center; */
+  text-align: center;
+  padding: 5px;
   margin-top: 25px;
-  margin-bottom: 40px;
+ 
 }
+
+#gamecontrol h2{
+  font-family: "Sorts Mill Goudy", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.3em;
+  color: #FFF5F5;
+  background-color: rgb(15, 1, 37,.75);
+  border-radius: 8px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  margin-left: 10%;
+  margin-right: 10%;
+
+}
+
+#gamecontrol p{
+  font-family: "Kaisei HarunoUmi", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #FFF5F5;
+  background-color: rgb(15, 1, 37,.75);
+  border-radius: 8px;
+  font-size: 1.3em;
+    padding-top: 8px;
+  padding-bottom: 8px;
+  margin-left: 20%;
+  margin-right: 20%;
+
+}
+
 
 #startgame{
    display: flex;
@@ -127,41 +162,40 @@ input[type="submit"]:hover {
 #die{
   display: flex;
   justify-content: center;
-  margin-top: 40px;
+  margin-top: 25px; 
+  margin-left: 10% ;
+  margin-right: 10%;
 }
 
-.imgdie{
-  max-width: 320px;
-  /* height: auto;
-  margin: 0;
-   display: flex;
-  justify-self: center;
-  margin-top: 4%;
-  margin-left: 10%; 
-  margin-right: 10%; */
-}
 .imgdie{
   max-width: 100%; 
-  height: auto; 
+ 
+  margin-left: 10% ;
+  margin-right: 10%;
+  margin-top: 40px;
+   animation: moveUpDown 1.5s infinite alternate ease-in-out;
 }
 
-/* #playarea{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 80px;
-    margin-top: 60px;
-} */
+@keyframes moveUpDown {
+  0% {
+    /* Start position (down) */
+    transform: translateY(0);
+  }
+  100% {
+    /* End position (up),  */
+    transform: translateY(-12px); 
+  }
+}
 
 #actions{
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 24%;
-    background: none;
+  background: none;
   box-shadow: none;
   width: auto;
-  margin-top: 20px;
+  
 
    /* width: 155px;
    height: 42px;
@@ -175,16 +209,25 @@ input[type="submit"]:hover {
    box-shadow: 0 2px 15.4px 3px #D5A33E; */
 }
 
+#rollagain:hover{
+    background: #4600de;
+    color:#e49800;
+}
+
+#pass:hover{
+    background: #4600de;
+    color:#e49800;
+}
+
 #roll{
-    display: flex;
-    text-align: center;
+   text-align: center;
    margin: 0 auto;
-   margin-top: 10%;
+   /* margin-top: 5%; */
    width: 155px;
    height: 42px;
    color: #FFFDF5;
    font-family: "Luxurious Roman";
-   font-size: 1.46em;
+   font-size: 1.6em;
    font-style: normal;
    font-weight: 400;
    border-radius: 8px;
@@ -192,35 +235,55 @@ input[type="submit"]:hover {
    box-shadow: 0 2px 15.4px 3px #D5A33E;
 }
 
+#roll:hover{
+    background: #4600de;
+    color:#e49800;
+
+  }
+
 .pass{
   font-size: 1.46em;
 }
 
-#game{
+
+#game p{
   display: flex;
   justify-content: center;
   gap:20px;
   border-radius: 8px;
   background: rgb(3, 0, 9,.4);
   padding: 8px;
+  font-family: "Kaisei HarunoUmi", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.3em;
+  color: #FFF5F5;
   margin-left: 36px;
   margin-right: 36px;
-  margin-top: 25px;
+  margin-top: 0;
   margin-bottom: 30px;
 }
 
-#game p{
-  color: rgb(255, 253, 245,.75);
-  font-size: 1.35em;
-  padding: 6px;
-  margin: 0;
+#game .player{
+  background: rgb(3, 0, 9,.4);
+  padding: 8px;
+  font-family: "Kaisei HarunoUmi", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.3em;
+  color: #FFF5F5;
+  margin-left: 36px;
+  margin-right: 36px;
+  margin-top: -475px;
+  margin-bottom: 400px;
 }
+
 
 #score{
   display: flex;
   justify-content: center;
   gap: 10%;
-  margin-top: 25px;
+  
 }
 
 #score p{
@@ -230,11 +293,15 @@ input[type="submit"]:hover {
   font-style: normal;
   font-size: 1.42em;
 }
-
-p{
-  font-family: "Kaisei HarunoUmi", serif;
-  font-weight: 400;
-  font-style: normal;
+#score h2{
+   color: #FFFDF5;
+   font-family: "Luxurious Roman";
+   font-size: 1.6em;
+   font-style: normal;
+   font-weight: 400;
+   border-radius: 8px;
+    background: rgb(3, 0, 9,.4);
+    padding: 8px;
 }
 
 #roll,
@@ -246,17 +313,34 @@ p{
   background: #230072;
   color: white;
   font-family: "Luxurious Roman";
-  font-size: 1.4em;
+  font-size: 1.6em;
+  text-align: center;
   border: none;
   box-shadow: 0 2px 15px 3px #D5A33E;
+  margin-bottom: 4%;
 }
 
+#message{
+  min-height: 40px;
+    display: flex;
+  justify-content: center;
+
+}
+
+#message p{
+    color: rgb(255, 253, 245,.75);
+    font-size: 1.35em;
+  background-color: rgb(15, 1, 37,.75);
+  border-radius: 8px;
+
+  padding: 8px;
+}
 @media screen and (min-width: 600px) {
   h1{
     font-size: 4em;
    
     margin-top: .5%;
-    
+    margin-bottom: 20px;
 
   }
 
@@ -264,12 +348,24 @@ p{
     margin-top: -2%;
   }
 
-  h2{
+    .beginGame h2{
     font-size: 1.4em;
     margin-left: 25%;
     margin-right: 25%;
-    margin-top: 8%;
+    margin-top: 4%;
     margin-bottom: 2%;
+    padding: 2%;
+  }
+
+  #gamecontrol{
+    margin-top: 10px;
+  }
+
+    #gamecontrol h2{
+    font-size: 1.35em;
+    text-align: center;
+    margin-left: 30%;
+    margin-right: 30%;
     padding: 2%;
   }
 
@@ -280,48 +376,105 @@ p{
     height: 48px;
   }
 
+#die{
+  display:flex;
+  justify-content:center;
+  margin-top:100px;
+  z-index: 1;
+    pointer-events: none;
+}
+
  .imgdie{
-  display: flex;
-  justify-content: center;
-  margin-top: 4%;
-  margin-left: 30%;
-  margin-right: 30%;
+  margin-top: 15px;
+ 
  }
 
   #actions{
     display: flex;
     justify-content: center;
-    margin-top: -392px;
+    margin-top: -372px;
     gap: 44%;
+    position: relative;
+    z-index: 2;
   }
 
   #game{
+    
+    align-items: center;
+    text-align: center;
     padding: 8px;
     margin-top: 20px;
-    width: 350px;
+    width: 450px;
     margin-left: auto;
     margin-right: auto;
+    /* min-height: 150px; */
     
   }
 
   #game p{
    color: rgb(255, 253, 245,.75);
    font-size: 1.35em;
+   
    padding: 6px;
-   margin: 0;
+   margin: 0 auto;
+   margin-top: 458px;
   }
-  #gamecontrol h2{
+
+  #gamecontrol p{
     padding: 8px;
     margin-top: 20px;
-    width: 420px;
+    width: 200px;
     margin-left: auto;
     margin-right: auto;
-    font-size: 1.4em;
+    text-align: center;
+    font-size: 1.3em;
+    padding: 2%;
   }
   #score{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content:left;
     gap: 10%;
-    margin-top: 325px;
+    position: fixed;
+    bottom: 20px;
+  left: 30px;
+  right: 0;
+    /* margin-top: 275px;
+    margin-bottom: 15px; */
   }
+
+  #roll{
+    margin-top: 36%;
+  }
+
+
+#rollagain, #pass{
+  margin-top: 76px;
+}
+
+#game .player{
+
+  margin-top: -520px;
+  margin-bottom: 400px;
+}
+
+#score h2{
+  margin-top: 380px;
+  display: flex;
+   width:400;
+    justify-content:center;
+    margin: auto;
+    margin-bottom: 40px;
+    padding: 8px;
+}
+
+#score p{
+  margin-top: 20px;
+}
+
+#message{
+  margin-top: -70px;
+}
+
+
 }

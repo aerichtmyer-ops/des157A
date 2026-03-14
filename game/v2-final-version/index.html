@@ -23,7 +23,7 @@
         </header> 
 
         <div class="beginGame">
-            <h2>Instructions: Begin with two players and roll the die to determine who goes first. Keep rolling the die to collect as many stars as you can or  choose to pass. If you roll a one, your turn is over and is given to the other player. If you roll a blank, your star count will drop to O. The first player to catch 30 stars or higher will be declared winner.</h2>
+            <h2>Instructions: Begin with two players and roll the die to determine who goes first. Keep rolling the die to collect as many stars as you can or  choose to pass. If you roll a one, your turn is over and is given to the other player. If you roll a blank, your star count will drop to O. The first player to catch 20 stars or higher will be declared winner.</h2>
             <input type = "submit" value="Begin Game">
         </div>
 
@@ -33,18 +33,20 @@
 
             <div class = "hidden">
 
-                           <div id= "die">
-                <img class= "imgdie" src="images/die2.svg" alt = "die of 2" height="424" width="463"> 
+            <div id= "die">
+                <img class= "imgdie" src="images/die.svg" alt = "die of 2" height="300" width="320"> 
             </div> 
             
             <div id = "gamecontrol">
-                <h2>Roll die to begin and assign player to start</h2>
+                <h2>Roll die to assign the first turn</h2>
                 <button id = "startgame">Roll</button>
             </div>
 
             <div id="game">
                 <!-- <p></p> -->
             </div>
+
+            <div id = "message"></div>
 
             <div id = "actions">
 

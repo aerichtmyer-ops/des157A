@@ -35,7 +35,7 @@
         //randomly set the gameData.index here, which will choose player
         gameData.index = Math.round(Math.random());
         console.log(gameData.index);
-        gameControl.innerHTML = `<h2>${gameData.players[gameData.index]} starts!</h2>`;
+        gameControl.innerHTML = `<p>${gameData.players[gameData.index]} starts!</p>`;
         //add quit button and instruction overlay here
 
         //add quit button event listener here
@@ -46,7 +46,7 @@
 
      //This function sets the content of game <div> and adds an event handler for the button that will roll the dice
      function setUpTurn(){
-        game.innerHTML = `<p>Roll the dice for ${gameData.players[gameData.index]}</p>`;
+        document.querySelector('#message').innerHTML = '';
         actionArea.innerHTML = '<button id = "roll">Roll</button>';;
         document.querySelector('#roll').addEventListener('click', function(){
             console.log('roll dice');
@@ -62,7 +62,7 @@
        gameData.roll1 = Math.floor(Math.random() *6) +1; //using ceil could result in 0
        
        //gamedata roll for second die
-       game.innerHTML = `<p>Roll the die for ${gameData.players[gameData.index]}</p>`;
+       game.innerHTML = `<p class= "player">${gameData.players[gameData.index]}'s turn</p>`;
        const dieImage = document.querySelector('#die');
        dieImage.innerHTML = `<img class= "imgdie" src = "images/${gameData.dice[gameData.roll1-1]}" height="400" width="400">`;//could add image for die 2 here 
        gameData.rollSum = gameData.roll1;// or add roll2
@@ -72,7 +72,7 @@
        //if a 1 is rolled
        if( gameData.rollSum === 1){
          console.log('roll 1: penalty');
-         game.innerHTML += '<p>Oh no! Your turn has been skipped!</p>';
+         document.querySelector('#message').innerHTML = '<p>Oh no! Your turn has been skipped!</p>';
          //set score for current player
          gameData.score[gameData.index] = 0;
 
@@ -87,7 +87,7 @@
        else if( gameData.roll1 === 3){
          console.log('the die was a value of 3');
          gameData.index ? (gameData.index = 0) : (gameData.index = 1);
-         game.innerHTML += `<p>Sorry, your role was a 3, switching turn to ${gameData.players[gameData.index]}</p>`;
+         document.querySelector('#message').innerHTML = `<p>Your rolled a 3, turn is given to ${gameData.players[gameData.index]}</p>`;
          setTimeout(setUpTurn, 2000);
        }
        else {
@@ -112,7 +112,7 @@
        //checkWinningCondition function
        function checkWinningCondition(){
          if(gameData.score[gameData.index] > gameData.gameEnd) {
-            score.innerHTML = `<h2>${gameData.players[gameData.index]} wins with ${gameData.score[gameData.index]}points!</h2>`;
+            score.innerHTML = `<h2>${gameData.players[gameData.index]} wins with ${gameData.score[gameData.index]} points!</h2>`;
 
             actionArea.innerHTML = '';
             //document.querySelector('#quit').innerHTML = 'Retry';//check for CSS condition of #quit
@@ -127,6 +127,7 @@
        function showCurrentScore(){
          score.innerHTML = `<p>${gameData.players[0]}: ${gameData.score[0]}</p>`;
          score.innerHTML += `<p>${gameData.players[1]}: ${gameData.score[1]}</p>`;
+         
        }
 
      }
